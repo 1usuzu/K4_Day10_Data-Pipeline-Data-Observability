@@ -1,21 +1,20 @@
 from __future__ import annotations
 
 import pandas as pd
-from src.core.config import load_settings, require_llm_credentials
-from src.core.utils import now_utc, write_csv, read_json
-from src.ingestion.crossref import fetch_source_records, load_raw_records
-from src.ingestion.cleaning import build_clean_dataframe
-from src.retrieval.index import LocalEmbeddingIndex
-from src.evaluation.testset import build_test_set
-from src.evaluation.metrics import evaluate_pipeline
-from src.observability.quality import run_data_quality_checks, build_freshness_report
-from src.observability.reporting import generate_phase1_report
+from core.config import load_settings, require_llm_credentials
+from core.utils import now_utc, write_csv, read_json
+from ingestion.crossref import fetch_source_records, load_raw_records
+from ingestion.cleaning import build_clean_dataframe
+from retrieval.index import LocalEmbeddingIndex
+from evaluation.testset import build_test_set
+from evaluation.metrics import evaluate_pipeline
+from observability.quality import run_data_quality_checks, build_freshness_report
+from observability.reporting import generate_phase1_report
 
 
 def main() -> None:
     settings = load_settings()
     require_llm_credentials(settings)
-
     print("--- 1. Ingestion ---")
     if settings.refresh_source or not settings.paths.raw_records_json.exists():
         records = fetch_source_records(settings)

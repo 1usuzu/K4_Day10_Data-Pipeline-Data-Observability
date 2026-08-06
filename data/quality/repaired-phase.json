@@ -1,0 +1,56 @@
+{
+  "report_name": "Repaired Phase",
+  "generated_at": "2026-08-06T09:49:41.902972+00:00",
+  "row_count": 24,
+  "checks": [
+    {
+      "name": "row_count",
+      "passed": true,
+      "details": {
+        "row_count": 24
+      }
+    },
+    {
+      "name": "paper_id_present",
+      "passed": true,
+      "details": {
+        "missing_count": 0
+      }
+    },
+    {
+      "name": "paper_id_unique",
+      "passed": true,
+      "details": {
+        "duplicate_count": 0,
+        "duplicate_ids": []
+      }
+    },
+    {
+      "name": "title_present",
+      "passed": true,
+      "details": {
+        "missing_count": 0
+      }
+    },
+    {
+      "name": "summary_length",
+      "passed": true,
+      "details": {
+        "too_short_count": 0,
+        "min_summary_chars": 40
+      }
+    },
+    {
+      "name": "freshness",
+      "passed": false,
+      "details": {
+        "stale_count": 11,
+        "freshness_threshold_days": 180
+      }
+    }
+  ],
+  "passed": false,
+  "failed_checks": [
+    "freshness"
+  ]
+}

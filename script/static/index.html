@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agentic RAG Explorer</title>
+    <!-- Use Inter font for a modern look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Marked.js for rendering markdown -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(135deg, #09090b 0%, #18181b 100%);
+            --glass-bg: rgba(39, 39, 42, 0.4);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --primary: #8b5cf6;
+            --primary-glow: rgba(139, 92, 246, 0.5);
+            --user-msg-bg: linear-gradient(135deg, #3b82f6 0%, #2dd4bf 100%);
+            --ai-msg-bg: rgba(63, 63, 70, 0.5);
+            --text-main: #f4f4f5;
+            --text-muted: #a1a1aa;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-gradient);
+            color: var(--text-main);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            line-height: 1.6;
+        }
+
+        /* Header Styling */
+        header {
+            text-align: center;
+            padding: 2rem 1rem 1rem 1rem;
+            z-index: 10;
+        }
+
+        .glow-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #a78bfa 0%, #60a5fa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: tracking-tight;
+            margin-bottom: 0.25rem;
+            text-shadow: 0 0 40px var(--primary-glow);
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-weight: 400;
+            font-size: 1rem;
+        }
+
+        /* Chat Container */
+        #chat-container {
+            flex: 1;
+            overflow-y: auto;
+            padding: 1rem 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+            scroll-behavior: smooth;
+        }
+
+        /* Custom Scrollbar */
+        #chat-container::-webkit-scrollbar {
+            width: 6px;
+        }
+        #chat-container::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        #chat-container::-webkit-scrollbar-thumb {
+            background: #52525b;
+            border-radius: 10px;
+        }
+
+        /* Message Bubbles */
+        .message {
+            display: flex;
+            gap: 1rem;
+            max-width: 85%;
+            animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .message.user {
+            align-self: flex-end;
+            flex-direction: row-reverse;
+        }
+
+        .message.ai {
+            align-self: flex-start;
+        }
+
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .user .avatar {
+            background: var(--user-msg-bg);
+            color: white;
+        }
+
+        .ai .avatar {
+            background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+            color: white;
+        }
+
+        .bubble {
+            padding: 1rem 1.25rem;
+            border-radius: 20px;
+            font-size: 1rem;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            word-break: break-word;
+        }
+
+        .user .bubble {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-bottom-right-radius: 4px;
+        }
+
+        .ai .bubble {
+            background: var(--ai-msg-bg);
+            border: 1px solid var(--glass-border);
+            border-bottom-left-radius: 4px;
+        }
+
+        /* Markdown Styles inside AI bubble */
+        .bubble p { margin-bottom: 0.75rem; }
+        .bubble p:last-child { margin-bottom: 0; }
+        .bubble strong { color: #fff; font-weight: 600; }
+        .bubble ul, .bubble ol { margin-left: 1.5rem; margin-bottom: 0.75rem; }
+        .bubble code {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9em;
+            color: #6ee7b7;
+        }
+        .bubble pre {
+            background: rgba(0,0,0,0.4);
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin-bottom: 0.75rem;
+            border: 1px solid var(--glass-border);
+        }
+        .bubble pre code { background: transparent; padding: 0; color: #e2e8f0; }
+
+        /* Input Area */
+        .input-area {
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 1rem 2rem 2rem 2rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .input-container {
+            display: flex;
+            align-items: center;
+            background: rgba(24, 24, 27, 0.8);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .input-container:focus-within {
+            border-color: rgba(139, 92, 246, 0.6);
+            box-shadow: 0 0 20px var(--primary-glow), 0 8px 32px rgba(0, 0, 0, 0.4);
+        }
+
+        input[type="text"] {
+            flex: 1;
+            background: transparent;
+            border: none;
+            color: #fff;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            outline: none;
+            padding: 0.5rem 0;
+        }
+        
+        input[type="text"]::placeholder {
+            color: #52525b;
+        }
+
+        .send-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 0 10px var(--primary-glow);
+            margin-left: 10px;
+        }
+
+        .send-btn:hover {
+            background: #7c3aed;
+            transform: scale(1.05);
+            box-shadow: 0 0 15px var(--primary-glow);
+        }
+
+        .send-btn:disabled {
+            background: #52525b;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .send-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+            transform: translateX(1px); /* optical alignment */
+        }
+
+        /* Typing Indicator */
+        .typing-indicator {
+            display: none;
+            gap: 4px;
+            align-items: center;
+            height: 24px;
+        }
+
+        .typing-indicator.active {
+            display: flex;
+        }
+
+        .dot {
+            width: 6px;
+            height: 6px;
+            background: #a1a1aa;
+            border-radius: 50%;
+            animation: bounce 1.4s infinite ease-in-out both;
+        }
+
+        .dot:nth-child(1) { animation-delay: -0.32s; }
+        .dot:nth-child(2) { animation-delay: -0.16s; }
+
+        @keyframes bounce {
+            0%, 80%, 100% { transform: scale(0); }
+            40% { transform: scale(1); }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="glow-title">🔮 Agentic RAG Explorer</h1>
+        <p class="subtitle">Chat with your academic papers using OpenRouter & ChromaDB</p>
+    </header>
+
+    <div id="chat-container">
+        <!-- Messages will be appended here -->
+        <div class="message ai">
+            <div class="avatar">🤖</div>
+            <div class="bubble">
+                <p>Hello! I am connected to the <strong>Repaired</strong> dataset. Ask me anything about the papers!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="input-area">
+        <form id="chat-form" onsubmit="sendMessage(event)">
+            <div class="input-container">
+                <input type="text" id="user-input" placeholder="Ask a question about the papers..." autocomplete="off">
+                <button type="submit" id="send-btn" class="send-btn">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
+                    </svg>
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const chatContainer = document.getElementById('chat-container');
+        const chatForm = document.getElementById('chat-form');
+        const userInput = document.getElementById('user-input');
+        const sendBtn = document.getElementById('send-btn');
+
+        // Configure marked to sanitize and format beautifully
+        marked.setOptions({
+            breaks: true,
+            gfm: true
+        });
+
+        function createMessageElement(role, content, isMarkdown = false) {
+            const msgDiv = document.createElement('div');
+            msgDiv.className = `message ${role}`;
+            
+            const avatar = document.createElement('div');
+            avatar.className = 'avatar';
+            avatar.textContent = role === 'user' ? 'U' : '🤖';
+            
+            const bubble = document.createElement('div');
+            bubble.className = 'bubble';
+            
+            if (isMarkdown && role === 'ai') {
+                bubble.innerHTML = marked.parse(content);
+            } else {
+                const p = document.createElement('p');
+                p.textContent = content;
+                bubble.appendChild(p);
+            }
+
+            msgDiv.appendChild(avatar);
+            msgDiv.appendChild(bubble);
+            return msgDiv;
+        }
+
+        function createTypingIndicator() {
+            const msgDiv = document.createElement('div');
+            msgDiv.className = 'message ai typing';
+            
+            const avatar = document.createElement('div');
+            avatar.className = 'avatar';
+            avatar.textContent = '🤖';
+            
+            const bubble = document.createElement('div');
+            bubble.className = 'bubble';
+            
+            const indicator = document.createElement('div');
+            indicator.className = 'typing-indicator active';
+            indicator.innerHTML = '<div class="dot"></div><div class="dot"></div><div class="dot"></div>';
+            
+            bubble.appendChild(indicator);
+            msgDiv.appendChild(avatar);
+            msgDiv.appendChild(bubble);
+            return msgDiv;
+        }
+
+        async function sendMessage(e) {
+            e.preventDefault();
+            const text = userInput.value.trim();
+            if (!text) return;
+
+            // 1. Add User message
+            chatContainer.appendChild(createMessageElement('user', text));
+            userInput.value = '';
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+
+            // Disable input while waiting
+            userInput.disabled = true;
+            sendBtn.disabled = true;
+
+            // 2. Add Typing Indicator
+            const typingIndicator = createTypingIndicator();
+            chatContainer.appendChild(typingIndicator);
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+
+            try {
+                // 3. Fetch from API
+                const response = await fetch('/api/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message: text })
+                });
+
+                const data = await response.json();
+                
+                // Remove typing indicator
+                chatContainer.removeChild(typingIndicator);
+                
+                if (!response.ok) {
+                    throw new Error(data.detail || data.error || 'Server error');
+                }
+
+                // 4. Add AI message
+                chatContainer.appendChild(createMessageElement('ai', data.response, true));
+                
+            } catch (err) {
+                // Remove typing indicator if error
+                if(chatContainer.contains(typingIndicator)) chatContainer.removeChild(typingIndicator);
+                chatContainer.appendChild(createMessageElement('ai', `**Error:** ${err.message}`, true));
+            } finally {
+                // Re-enable input
+                userInput.disabled = false;
+                sendBtn.disabled = false;
+                userInput.focus();
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+            }
+        }
+    </script>
+</body>
+</html>
