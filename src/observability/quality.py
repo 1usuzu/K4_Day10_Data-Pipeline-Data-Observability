@@ -48,7 +48,7 @@ def _check_title_present(df: pd.DataFrame) -> dict[str, Any]:
 def _check_summary_length(df: pd.DataFrame) -> dict[str, Any]:
     if "summary" not in df.columns:
         return {"name": "summary_length", "passed": False, "details": {"error": "missing summary column"}}
-    too_short = df["summary"].astype(str).str.len() < MIN_SUMMARY_CHARS
+    too_short = df["summary"].fillna("").astype(str).str.len() < MIN_SUMMARY_CHARS
     too_short_count = int(too_short.sum())
     return {
         "name": "summary_length",
