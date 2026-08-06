@@ -9,7 +9,7 @@
 | Khóa/Lớp         | K4              |
 | Tên nhóm         | B4-2     |
 | Vai trò chính    | Vai trò 5 — Evaluation & Observability |
-| Repository         | https://github.com/1usuzu/K4_Day10_Data-Pipeline-Data-Observability |
+| Repository         | https://github.com/1usuzu/K4_Day10_Data-Pipeline-Data-Observability-B4-2 |
 | Ngày hoàn thành | 2026-08-06                  |
 
 ## 2. Vai trò và phạm vi công việc
