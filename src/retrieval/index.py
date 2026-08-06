@@ -83,11 +83,28 @@ class LocalEmbeddingIndex:
     @classmethod
     def build(
         cls,
-        df: pd.DataFrame,
-        settings: Settings,
-        embeddings_output_path: Path | None = None,
+        *args,
+        **kwargs,
     ) -> "LocalEmbeddingIndex":
-        collection_name = cls._derive_collection_name(settings, embeddings_output_path)
+        # Hỗ trợ linh hoạt cả hai cách truyền tham số (df trước hoặc settings trước)
+        import pandas as pd
+        
+        # Nếu tham số đầu tiên là DataFrame, nghĩa là dùng chữ ký gốc (df, settings, embeddings_output_path)
+        if len(args) >= 1 and isinstance(args[0], pd.DataFrame):
+            df = args[0]
+            settings = args[1] if len(args) >= 2 else kwargs.get("settings")
+            embeddings_output_path = args[2] if len(args) >= 3 else kwargs.get("embeddings_output_path")
+            collection_name = None
+        # Ngược lại, nghĩa là truyền settings lên trước
+        else:
+            settings = args[0] if len(args) >= 1 else kwargs.get("settings")
+            df = args[1] if len(args) >= 2 else kwargs.get("df")
+            collection_name = args[2] if len(args) >= 3 else None
+            embeddings_output_path = args[3] if len(args) >= 4 else None
+
+        if collection_name is None:
+            collection_name = cls._derive_collection_name(settings, embeddings_output_path)
+
         documents = cls._build_documents(df)
         persist_path = settings.paths.chroma_dir
         persist_path.mkdir(parents=True, exist_ok=True)
