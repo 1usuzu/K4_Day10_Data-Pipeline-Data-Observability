@@ -82,17 +82,3 @@ def generate_corruption_report(
 ) -> None:
     """TODO(student): viet markdown report so sanh baseline/corrupted/repaired."""
     raise NotImplementedError("Student task: implement corruption comparison report.")
-
-
-def generate_corruption_report(
-    report_path,
-    baseline_metrics: dict[str, Any],
-    corrupted_metrics: dict[str, Any],
-    repaired_metrics: dict[str, Any],
-    corrupted_quality: dict[str, Any],
-    repaired_quality: dict[str, Any],
-    corrupted_freshness: dict[str, Any],
-    repaired_freshness: dict[str, Any],
-) -> None:
-    """TODO(student): viet markdown report so sanh baseline/corrupted/repaired."""
-    raise NotImplementedError("Student task: implement corruption comparison report.")
