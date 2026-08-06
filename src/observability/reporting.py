@@ -80,5 +80,27 @@ def generate_corruption_report(
     corrupted_freshness: dict[str, Any],
     repaired_freshness: dict[str, Any],
 ) -> None:
-    """TODO(student): viet markdown report so sanh baseline/corrupted/repaired."""
-    raise NotImplementedError("Student task: implement corruption comparison report.")
+    """Viet markdown report so sanh baseline/corrupted/repaired."""
+    content = f"""# Phase 2 Corruption & Repair Report
+
+Generated at: {now_utc().isoformat()}
+
+## Retrieval & Evaluation Comparison
+
+| Metric | Baseline | Corrupted | Repaired |
+| --- | --- | --- | --- |
+| Retrieval Hit Rate | {_fmt(baseline_metrics.get('retrieval_hit_rate'))} | {_fmt(corrupted_metrics.get('retrieval_hit_rate'))} | {_fmt(repaired_metrics.get('retrieval_hit_rate'))} |
+| Mean Token F1 | {_fmt(baseline_metrics.get('mean_token_f1'))} | {_fmt(corrupted_metrics.get('mean_token_f1'))} | {_fmt(repaired_metrics.get('mean_token_f1'))} |
+| Judge Accuracy | {_fmt(baseline_metrics.get('judge_accuracy'))} | {_fmt(corrupted_metrics.get('judge_accuracy'))} | {_fmt(repaired_metrics.get('judge_accuracy'))} |
+| Mean Judge Score | {_fmt(baseline_metrics.get('mean_judge_score'))} | {_fmt(corrupted_metrics.get('mean_judge_score'))} | {_fmt(repaired_metrics.get('mean_judge_score'))} |
+
+## Data Quality Comparison
+
+| Metric | Corrupted | Repaired |
+| --- | --- | --- |
+| Overall Status | {"PASS" if corrupted_quality.get("passed") else "FAIL"} | {"PASS" if repaired_quality.get("passed") else "FAIL"} |
+| Failed Checks | {corrupted_quality.get('failed_checks') or "none"} | {repaired_quality.get('failed_checks') or "none"} |
+| Stale Rows | {corrupted_freshness.get('stale_rows')} | {repaired_freshness.get('stale_rows')} |
+| Is Fresh | {corrupted_freshness.get('is_fresh')} | {repaired_freshness.get('is_fresh')} |
+"""
+    write_text(report_path, content)
