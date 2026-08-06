@@ -1,0 +1,290 @@
+[
+  {
+    "id": "q001",
+    "question_type": "summary",
+    "question": "What is this paper about: 'JADE-Plus: A Multimodal Agentic Retrieval-Augmented Generation Large Language Framework for Diagnostic Support in Jawbone Lesions: Development and Technical Validation Study'?",
+    "ground_truth": "Diagnosing jawbone lesions in oral and maxillofacial radiology remains challenging due to overlapping radiological features and the need for integrated clinical reasoning.",
+    "ground_truth_doc_ids": [
+      "10.1007/s10278-026-02086-9"
+    ]
+  },
+  {
+    "id": "q002",
+    "question_type": "authors",
+    "question": "Who authored 'JADE-Plus: A Multimodal Agentic Retrieval-Augmented Generation Large Language Framework for Diagnostic Support in Jawbone Lesions: Development and Technical Validation Study'?",
+    "ground_truth": "Soroush Baseri Saadi, Jonas Ver Berne, Rocharles Cavalcante Fontenele, Peter Claes, Reinhilde Jacobs",
+    "ground_truth_doc_ids": [
+      "10.1007/s10278-026-02086-9"
+    ]
+  },
+  {
+    "id": "q003",
+    "question_type": "date",
+    "question": "When was 'JADE-Plus: A Multimodal Agentic Retrieval-Augmented Generation Large Language Framework for Diagnostic Support in Jawbone Lesions: Development and Technical Validation Study' published?",
+    "ground_truth": "2026-07-13",
+    "ground_truth_doc_ids": [
+      "10.1007/s10278-026-02086-9"
+    ]
+  },
+  {
+    "id": "q004",
+    "question_type": "categories",
+    "question": "What categories does 'JADE-Plus: A Multimodal Agentic Retrieval-Augmented Generation Large Language Framework for Diagnostic Support in Jawbone Lesions: Development and Technical Validation Study' belong to?",
+    "ground_truth": "Journal of Imaging Informatics in Medicine",
+    "ground_truth_doc_ids": [
+      "10.1007/s10278-026-02086-9"
+    ]
+  },
+  {
+    "id": "q005",
+    "question_type": "summary",
+    "question": "What is this paper about: 'Clinical Large Language Models with Multi-Stage Instruction Tuning and Advanced Retrieval-Augmented Generation'?",
+    "ground_truth": "The demand for efficient and accurate Clinical Decision Support Systems (CDSS) is growing rapidly, driven by the escalating volume of medical data.",
+    "ground_truth_doc_ids": [
+      "10.20944/preprints202602.0996.v1"
+    ]
+  },
+  {
+    "id": "q006",
+    "question_type": "authors",
+    "question": "Who authored 'Clinical Large Language Models with Multi-Stage Instruction Tuning and Advanced Retrieval-Augmented Generation'?",
+    "ground_truth": "Donald Martin, Blake Bowman",
+    "ground_truth_doc_ids": [
+      "10.20944/preprints202602.0996.v1"
+    ]
+  },
+  {
+    "id": "q007",
+    "question_type": "date",
+    "question": "When was 'Clinical Large Language Models with Multi-Stage Instruction Tuning and Advanced Retrieval-Augmented Generation' published?",
+    "ground_truth": "2026-02-12",
+    "ground_truth_doc_ids": [
+      "10.20944/preprints202602.0996.v1"
+    ]
+  },
+  {
+    "id": "q008",
+    "question_type": "categories",
+    "question": "What categories does 'Clinical Large Language Models with Multi-Stage Instruction Tuning and Advanced Retrieval-Augmented Generation' belong to?",
+    "ground_truth": "posted-content",
+    "ground_truth_doc_ids": [
+      "10.20944/preprints202602.0996.v1"
+    ]
+  },
+  {
+    "id": "q009",
+    "question_type": "summary",
+    "question": "What is this paper about: 'Retrieval-Augmented Large Language Model Agents for Automated Scientific Literature Review Generation'?",
+    "ground_truth": "This study investigates a method that integrates retrieval-augmented mechanisms into large language model agents for scientific literature review generation.",
+    "ground_truth_doc_ids": [
+      "10.20944/preprints202604.0339.v1"
+    ]
+  },
+  {
+    "id": "q010",
+    "question_type": "authors",
+    "question": "Who authored 'Retrieval-Augmented Large Language Model Agents for Automated Scientific Literature Review Generation'?",
+    "ground_truth": "Ruotong Wang, Nyutian Long, Shunqi Liu, Yuxi Wang, Zhen Qi, Huajun Zhang",
+    "ground_truth_doc_ids": [
+      "10.20944/preprints202604.0339.v1"
+    ]
+  },
+  {
+    "id": "q011",
+    "question_type": "date",
+    "question": "When was 'Retrieval-Augmented Large Language Model Agents for Automated Scientific Literature Review Generation' published?",
+    "ground_truth": "2026-04-06",
+    "ground_truth_doc_ids": [
+      "10.20944/preprints202604.0339.v1"
+    ]
+  },
+  {
+    "id": "q012",
+    "question_type": "categories",
+    "question": "What categories does 'Retrieval-Augmented Large Language Model Agents for Automated Scientific Literature Review Generation' belong to?",
+    "ground_truth": "posted-content",
+    "ground_truth_doc_ids": [
+      "10.20944/preprints202604.0339.v1"
+    ]
+  },
+  {
+    "id": "q013",
+    "question_type": "summary",
+    "question": "What is this paper about: 'Microsoft Azure artificial intelligence / machine learning hackathon for development of retrieval-augmented generation large language model'?",
+    "ground_truth": "The US Army Corps of Engineers (USACE) Civil Works (CW) research and development (R&D) mission is to address challenging environmental sustainability problems through innovative science and engineering, which helps to ensure a safer, more prosperous, and more resilient nation.",
+    "ground_truth_doc_ids": [
+      "10.21079/11681/50309"
+    ]
+  },
+  {
+    "id": "q014",
+    "question_type": "authors",
+    "question": "Who authored 'Microsoft Azure artificial intelligence / machine learning hackathon for development of retrieval-augmented generation large language model'?",
+    "ground_truth": "Janet L. Autrey, Lacey S. Duckworth, Ashly N. Horner, Thomas Sigler, Victoria D. Moore",
+    "ground_truth_doc_ids": [
+      "10.21079/11681/50309"
+    ]
+  },
+  {
+    "id": "q015",
+    "question_type": "date",
+    "question": "When was 'Microsoft Azure artificial intelligence / machine learning hackathon for development of retrieval-augmented generation large language model' published?",
+    "ground_truth": "2026-07-01",
+    "ground_truth_doc_ids": [
+      "10.21079/11681/50309"
+    ]
+  },
+  {
+    "id": "q016",
+    "question_type": "categories",
+    "question": "What categories does 'Microsoft Azure artificial intelligence / machine learning hackathon for development of retrieval-augmented generation large language model' belong to?",
+    "ground_truth": "report",
+    "ground_truth_doc_ids": [
+      "10.21079/11681/50309"
+    ]
+  },
+  {
+    "id": "q017",
+    "question_type": "summary",
+    "question": "What is this paper about: 'Retrieval-Augmented Generation (RAG), Generative AI, and Agentic AI Governance: An Integrated Enterprise Governance Prioritization Architecture'?",
+    "ground_truth": "Enterprise adoption of artificial intelligence (AI) systems, including Generative AI (GenAI), Retrieval-Augmented Generation (RAG), and agentic AI, is advancing faster than many organizations can adapt their governance, audit, cybersecurity, and executive oversight practices.",
+    "ground_truth_doc_ids": [
+      "10.21203/rs.3.rs-10012178/v1"
+    ]
+  },
+  {
+    "id": "q018",
+    "question_type": "authors",
+    "question": "Who authored 'Retrieval-Augmented Generation (RAG), Generative AI, and Agentic AI Governance: An Integrated Enterprise Governance Prioritization Architecture'?",
+    "ground_truth": "Audrey Rah, Sven Hahues",
+    "ground_truth_doc_ids": [
+      "10.21203/rs.3.rs-10012178/v1"
+    ]
+  },
+  {
+    "id": "q019",
+    "question_type": "date",
+    "question": "When was 'Retrieval-Augmented Generation (RAG), Generative AI, and Agentic AI Governance: An Integrated Enterprise Governance Prioritization Architecture' published?",
+    "ground_truth": "2026-06-15",
+    "ground_truth_doc_ids": [
+      "10.21203/rs.3.rs-10012178/v1"
+    ]
+  },
+  {
+    "id": "q020",
+    "question_type": "categories",
+    "question": "What categories does 'Retrieval-Augmented Generation (RAG), Generative AI, and Agentic AI Governance: An Integrated Enterprise Governance Prioritization Architecture' belong to?",
+    "ground_truth": "posted-content",
+    "ground_truth_doc_ids": [
+      "10.21203/rs.3.rs-10012178/v1"
+    ]
+  },
+  {
+    "id": "q021",
+    "question_type": "summary",
+    "question": "What is this paper about: 'Graph Retrieval-Augmented Generation for Large Language Models: A Survey'?",
+    "ground_truth": "Large Language Models (LLMs) demonstrate general knowledge, but they suffer when specifically needed knowledge is not present in their training set.",
+    "ground_truth_doc_ids": [
+      "10.2139/ssrn.4895062"
+    ]
+  },
+  {
+    "id": "q022",
+    "question_type": "authors",
+    "question": "Who authored 'Graph Retrieval-Augmented Generation for Large Language Models: A Survey'?",
+    "ground_truth": "Tyler Procko, Omar Ochoa",
+    "ground_truth_doc_ids": [
+      "10.2139/ssrn.4895062"
+    ]
+  },
+  {
+    "id": "q023",
+    "question_type": "date",
+    "question": "When was 'Graph Retrieval-Augmented Generation for Large Language Models: A Survey' published?",
+    "ground_truth": "2024-01-01",
+    "ground_truth_doc_ids": [
+      "10.2139/ssrn.4895062"
+    ]
+  },
+  {
+    "id": "q024",
+    "question_type": "categories",
+    "question": "What categories does 'Graph Retrieval-Augmented Generation for Large Language Models: A Survey' belong to?",
+    "ground_truth": "posted-content",
+    "ground_truth_doc_ids": [
+      "10.2139/ssrn.4895062"
+    ]
+  },
+  {
+    "id": "q025",
+    "question_type": "summary",
+    "question": "What is this paper about: 'Biomedrag: A Retrieval Augmented Large Language Model for Biomedicine'?",
+    "ground_truth": "Retrieval-augmented generation (RAG) offers a solution by retrieving knowledge from an established database to avoid hallucination of large language models (LLM).",
+    "ground_truth_doc_ids": [
+      "10.2139/ssrn.4910081"
+    ]
+  },
+  {
+    "id": "q026",
+    "question_type": "authors",
+    "question": "Who authored 'Biomedrag: A Retrieval Augmented Large Language Model for Biomedicine'?",
+    "ground_truth": "Mingchen Li, Halil Kilicoglu, Hua Xu, rui zhang",
+    "ground_truth_doc_ids": [
+      "10.2139/ssrn.4910081"
+    ]
+  },
+  {
+    "id": "q027",
+    "question_type": "date",
+    "question": "When was 'Biomedrag: A Retrieval Augmented Large Language Model for Biomedicine' published?",
+    "ground_truth": "2024-01-01",
+    "ground_truth_doc_ids": [
+      "10.2139/ssrn.4910081"
+    ]
+  },
+  {
+    "id": "q028",
+    "question_type": "categories",
+    "question": "What categories does 'Biomedrag: A Retrieval Augmented Large Language Model for Biomedicine' belong to?",
+    "ground_truth": "posted-content",
+    "ground_truth_doc_ids": [
+      "10.2139/ssrn.4910081"
+    ]
+  },
+  {
+    "id": "q029",
+    "question_type": "summary",
+    "question": "What is this paper about: 'Agentic Retrieval-Augmented Generation Systems for Medical Decision Support: A Comprehensive Survey'?",
+    "ground_truth": "The introduction of Agentic Retrieval-Augmented Generation Technology is a breakthrough in the field of Medical Artificial Intelligence, allowing autonomous agents to coordinate complex clinical workflows, integrate evidence into the patient\u2019s care cycle, and supply decision-making support to health care professionals and patients.",
+    "ground_truth_doc_ids": [
+      "10.2139/ssrn.6386988"
+    ]
+  },
+  {
+    "id": "q030",
+    "question_type": "authors",
+    "question": "Who authored 'Agentic Retrieval-Augmented Generation Systems for Medical Decision Support: A Comprehensive Survey'?",
+    "ground_truth": "Venkitesh S. Anand, Akhil V. V.",
+    "ground_truth_doc_ids": [
+      "10.2139/ssrn.6386988"
+    ]
+  },
+  {
+    "id": "q031",
+    "question_type": "date",
+    "question": "When was 'Agentic Retrieval-Augmented Generation Systems for Medical Decision Support: A Comprehensive Survey' published?",
+    "ground_truth": "2026-01-01",
+    "ground_truth_doc_ids": [
+      "10.2139/ssrn.6386988"
+    ]
+  },
+  {
+    "id": "q032",
+    "question_type": "categories",
+    "question": "What categories does 'Agentic Retrieval-Augmented Generation Systems for Medical Decision Support: A Comprehensive Survey' belong to?",
+    "ground_truth": "posted-content",
+    "ground_truth_doc_ids": [
+      "10.2139/ssrn.6386988"
+    ]
+  }
+]
