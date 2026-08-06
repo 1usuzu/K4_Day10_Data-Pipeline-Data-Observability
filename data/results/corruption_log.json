@@ -4,47 +4,103 @@
   "operations": [
     {
       "type": "drop_latest_records",
-      "row_count": 1,
+      "record_ids": [
+        "10.1007/s10278-026-02086-9"
+      ],
       "paper_ids": [
         "10.1007/s10278-026-02086-9"
-      ]
+      ],
+      "row_count": 1,
+      "before_count": 24,
+      "after_count": 23,
+      "parameters": {
+        "latest_count": 1
+      }
     },
     {
       "type": "blank_summary",
-      "row_count": 1,
+      "record_ids": [
+        "10.2196/preprints.106157"
+      ],
       "paper_ids": [
         "10.2196/preprints.106157"
-      ]
+      ],
+      "row_count": 1,
+      "before_count": 23,
+      "after_count": 23,
+      "parameters": {
+        "column": "summary",
+        "replacement": ""
+      }
     },
     {
       "type": "inject_summary_noise",
-      "row_count": 1,
+      "record_ids": [
+        "10.3390/buildings16132637"
+      ],
       "paper_ids": [
         "10.3390/buildings16132637"
       ],
-      "noise_token": "CORRUPTED_NOISE_TOKEN"
+      "row_count": 1,
+      "before_count": 23,
+      "after_count": 23,
+      "parameters": {
+        "column": "summary",
+        "noise_token": "CORRUPTED_NOISE_TOKEN",
+        "repetitions": 2
+      }
     },
     {
       "type": "truncate_title",
-      "row_count": 1,
+      "record_ids": [
+        "10.21079/11681/50309"
+      ],
       "paper_ids": [
         "10.21079/11681/50309"
-      ]
+      ],
+      "row_count": 1,
+      "before_count": 23,
+      "after_count": 23,
+      "parameters": {
+        "column": "title",
+        "max_chars": 40
+      }
     },
     {
       "type": "make_stale_publication_date",
-      "row_count": 1,
+      "record_ids": [
+        "10.63646/kpqm1958"
+      ],
       "paper_ids": [
         "10.63646/kpqm1958"
       ],
-      "published": "2000-01-01"
+      "row_count": 1,
+      "before_count": 23,
+      "after_count": 23,
+      "parameters": {
+        "columns": [
+          "published",
+          "updated",
+          "age_days"
+        ],
+        "published": "2000-01-01"
+      }
     },
     {
       "type": "add_duplicate_rows",
-      "row_count": 1,
+      "record_ids": [
+        "10.2139/ssrn.4910081"
+      ],
       "paper_ids": [
         "10.2139/ssrn.4910081"
-      ]
+      ],
+      "row_count": 1,
+      "before_count": 23,
+      "after_count": 24,
+      "parameters": {
+        "duplicate_count": 1,
+        "source": "tail"
+      }
     }
   ]
 }
