@@ -71,7 +71,9 @@ def load_settings(project_dir: Path | None = None) -> Settings:
     root = (project_dir or Path(__file__).resolve().parents[2]).resolve()
     workspace = root.parent
     freshness_threshold_days = 180
-    source_from_date = (datetime.now(UTC).date() - timedelta(days=freshness_threshold_days)).isoformat()
+    today = datetime.now(UTC).date()
+    source_from_date = (today - timedelta(days=freshness_threshold_days)).isoformat()
+    source_until_date = today.isoformat()
 
     load_dotenv(workspace / ".env")
     load_dotenv(root / ".env", override=False)
@@ -125,7 +127,7 @@ def load_settings(project_dir: Path | None = None) -> Settings:
         repaired_collection_name="papers-repaired",
         source_api="Crossref REST API",
         source_query="agentic retrieval augmented generation large language model",
-        source_filter=f"from-pub-date:{source_from_date},has-abstract:true",
+        source_filter=f"from-update-date:{source_from_date},until-update-date:{source_until_date}",
         max_results=24,
         top_k=4,
         freshness_threshold_days=freshness_threshold_days,

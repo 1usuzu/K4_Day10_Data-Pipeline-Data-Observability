@@ -1,0 +1,454 @@
+[
+  {
+    "paper_id": "10.36227/techrxiv.171837853.31531482/v1",
+    "title": "Large Language Model with Federated Retrieval-Augmented Generation for Improved Knowledge Retrieval",
+    "summary": "Natural language processing models have shown lots of advancements in generating coherent and contextually relevant responses, yet they often struggle with retrieving precise and upto-date information due to the static nature of their training data. Introducing Federated Retrieval-Augmented Generation (RAG) represents a novel and significant approach by integrating federated learning with dynamic retrieval mechanisms to enhance information retrieval and response generation. This article presents the implementation of Federated RAG on Mistral 8x7b, an open-source large language model, demonstrating substantial improvements in retrieval quality and response accuracy. The federated learning framework facilitated distributed training across multiple nodes, ensuring data privacy while enabling the model to leverage diverse information sources. Comprehensive evaluation on the MMLU benchmark revealed that the Federated RAG model consistently outperformed the baseline RAG model, achieving higher accuracy and relevance in the generated responses. Detailed analysis and optimization of the retrieval mechanisms and training processes contributed to the model\u2019s enhanced performance, highlighting the potential of Federated RAG as a scalable solution for knowledge-intensive applications.",
+    "authors": [
+      "Xueqin Hou",
+      "Xijin Wang"
+    ],
+    "categories": [
+      "posted-content"
+    ],
+    "primary_category": "posted-content",
+    "published": "2024-06-14",
+    "updated": "2026-06-03",
+    "abs_url": "https://doi.org/10.36227/techrxiv.171837853.31531482/v1",
+    "pdf_url": "https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.171837853.31531482/v1",
+    "comment": "posted-content, Institute of Electrical and Electronics Engineers (IEEE)"
+  },
+  {
+    "paper_id": "10.3390/buildings16132637",
+    "title": "An Agentic AI System for Roof Design Compliance Using Computer Vision, Retrieval-Augmented Generation and Large Language Models",
+    "summary": "Designers, engineers, and building officials face increasing pressure to accelerate and improve the accuracy of design review for buildings and infrastructure. Roof assemblies and rooftop structures are particularly challenging due to the complexity and fragmentation of regulatory requirements, especially in jurisdictions such as Florida, where compliance must be verified across both the residential and commercial volumes of the Florida Building Code (FBC). The resulting review process is technically demanding and time-intensive, imposing significant cognitive and operational burdens on practitioners and under-resourced public agencies. To address these challenges, this study proposes and evaluates an agentic artificial intelligence (AI) framework for automated code compliance checking of roof assemblies and rooftop structures. The framework employs a multi-agent architecture in which specialized AI agents collaboratively interpret regulatory provisions and evaluate roof design parameters across four core modules: data preprocessing and code ingestion, rule-based and semantic analysis, results visualization, and iterative validation. YOLO11m-seg and Mask R-CNN were used for element detection and segmentation, and the system was developed using 150 design projects, including roof plans, section details, and specifications. Four large language models from two families (Mistral and GPT) were comparatively evaluated on standardized compliance tasks. The framework was then tested on a held-out portfolio of 15 distinct roof-design projects comprising 60 code-compliance decisions derived from the FBC 2023, with performance measured by precision, recall, F1-score, and accuracy. GPT-5.4 achieved the highest overall performance (F1 = 0.97; accuracy = 97%). Because the reasoning and vision components were evaluated separately rather than as an integrated end-to-end pipeline, and the scope was limited to one jurisdiction and two drawing types, broader code coverage and production-setting validation are needed before claims of generality. Nonetheless, the results suggest that agentic AI can meaningfully support compliance review and reduce reviewer burden in roof-design permitting.",
+    "authors": [
+      "Nawari O. Nawari",
+      "Oluwatoyin O. Lawal"
+    ],
+    "categories": [
+      "Buildings"
+    ],
+    "primary_category": "Buildings",
+    "published": "2026-07-02",
+    "updated": "2026-07-02",
+    "abs_url": "https://doi.org/10.3390/buildings16132637",
+    "pdf_url": "https://www.mdpi.com/2075-5309/16/13/2637/pdf",
+    "comment": "journal-article, Buildings, MDPI AG"
+  },
+  {
+    "paper_id": "10.2139/ssrn.7172681",
+    "title": "ROSE-RAG: Robust Sequential Evidence Acquisition for Agentic Retrieval-augmented Generation under Source-model Ambiguity",
+    "summary": "Retrieval-Augmented Generation (RAG) can improve factual decisions, but the value of retrieval depends on source reliability, acquisition cost, current belief, and downstream loss. We introduce ROSE-RAG, a sequential decision framework that determines whether to retrieve, which source to query, when to stop, and whether to answer or abstain when source-specific evidence channels are uncertain. The framework uses history-consistent robustness (HCR), which retains each posterior together with a complete source model that could have generated the observed history. HCR allows history-conditioned worst-case reoptimization while preventing posterior-channel combinations that are incompatible with any complete model. We define an HCR-specific Robust Value of Evidence that compares the risk of stopping with the cost and worst-case continuation risk of querying each source. We establish recursive optimality, a nominal-static-HCR-rectangular value hierarchy, acquisition certificates, ambiguity-monotonicity results, and a finite-sample risk certificate. Controlled and Monte Carlo studies reproduce these structural properties, and no certificate violation occurs in the 5,835 finite-sample trials in which the true complete model is covered. Under deliberate source-model misspecification, HCR-ROSE has 43.3% lower mean instance-level worst-case risk than nominal sequential acquisition among retrieval-using methods. On a controlled adapter of the RGB benchmark, balanced-candidate calibration <br> narrows incorrect-candidate channel intervals by 63\u201380% and reduces HCR <br> risk by 19.4%, although the paired intervals do not establish a risk advantage <br> over the strongest nominal or confidence-threshold baselines. These results <br> show that robust acquisition is useful when source behavior is identifiable <br> and retrieval decisions are evaluated through downstream loss.",
+    "authors": [
+      "Arian Mokhtari",
+      "Maziar Davoodi"
+    ],
+    "categories": [
+      "posted-content"
+    ],
+    "primary_category": "posted-content",
+    "published": "2026-01-01",
+    "updated": "2026-08-05",
+    "abs_url": "https://doi.org/10.2139/ssrn.7172681",
+    "pdf_url": "",
+    "comment": "posted-content, Elsevier BV"
+  },
+  {
+    "paper_id": "10.22541/au.172616761.18841409/v1",
+    "title": "Model Distillation for Enhanced Contextual Response Prediction Using Retrieval-Augmented Generation in Large Language Models",
+    "summary": "The rapid growth of conversational systems has highlighted the critical need for models capable of generating contextually accurate and relevant responses, particularly in knowledge-dependent interactions. A novel approach is introduced through the integration of retrieval-augmented generation (RAG) and model distillation, allowing enhanced alignment between generated responses and dynamic external knowledge sources. This method not only improves the factual correctness of responses but also addresses the limitations of static, pre-trained models, which often struggle with hallucinations and outdated information. Experiments reveal that the modified model demonstrates superior performance in terms of retrieval accuracy, response coherence, and computational efficiency, particularly in multi-turn conversations requiring complex knowledge integration. The synergy between retrieval mechanisms and generative processes significantly improves the model's scalability and adaptability, making it suitable for real-time applications across diverse query types. Additionally, the streamlined computational footprint achieved through model distillation ensures that the student model retains the teacher's high accuracy while operating with reduced resource requirements.",
+    "authors": [
+      "Oliver Manjot",
+      "Marcus Delgado",
+      "Samuel Ford"
+    ],
+    "categories": [
+      "posted-content"
+    ],
+    "primary_category": "posted-content",
+    "published": "2024-09-12",
+    "updated": "2026-06-30",
+    "abs_url": "https://doi.org/10.22541/au.172616761.18841409/v1",
+    "pdf_url": "https://www.authorea.com/doi/pdf/10.22541/au.172616761.18841409/v1",
+    "comment": "posted-content, Wiley"
+  },
+  {
+    "paper_id": "10.47576/2949-1894.2026.7.7.023",
+    "title": "\u0421\u043d\u0438\u0436\u0435\u043d\u0438\u0435 \u0440\u0438\u0441\u043a\u043e\u0432 \u043f\u0440\u0438\u043c\u0435\u043d\u0435\u043d\u0438\u044f LLM (Large Language Model) \u0432 \u0441\u0444\u0435\u0440\u0435 \u044d\u043a\u043e\u043d\u043e\u043c\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0441\u0442\u0438 \u043f\u0440\u0435\u0434\u043f\u0440\u0438\u044f\u0442\u0438\u0439 \u043c\u043e\u043b\u043e\u0447\u043d\u043e\u0439 \u043f\u0440\u043e\u043c\u044b\u0448\u043b\u0435\u043d\u043d\u043e\u0441\u0442\u0438 \u043d\u0430 \u043e\u0441\u043d\u043e\u0432\u0435 \u043f\u043e\u0434\u0445\u043e\u0434\u0430 RAG (Retrieval-Augmented Generation)",
+    "summary": "\u0412 \u0441\u0442\u0430\u0442\u044c\u0435 \u043f\u0440\u043e\u0432\u0435\u0434\u0435\u043d\u043e \u0438\u0441\u0441\u043b\u0435\u0434\u043e\u0432\u0430\u043d\u0438\u0435 \u043e\u0441\u043e\u0431\u0435\u043d\u043d\u043e\u0441\u0442\u0435\u0439 \u0441\u043d\u0438\u0436\u0435\u043d\u0438\u044f \u0440\u0438\u0441\u043a\u043e\u0432 \u043f\u0440\u0438\u043c\u0435\u043d\u0435\u043d\u0438\u044f LLM (Large Language Model) \u0432 \u0441\u0444\u0435\u0440\u0435 \u044d\u043a\u043e\u043d\u043e\u043c\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0441\u0442\u0438 \u043f\u0440\u0435\u0434\u043f\u0440\u0438\u044f\u0442\u0438\u0439 \u043c\u043e\u043b\u043e\u0447\u043d\u043e\u0439 \u043f\u0440\u043e\u043c\u044b\u0448\u043b\u0435\u043d\u043d\u043e\u0441\u0442\u0438 \u043d\u0430 \u043e\u0441\u043d\u043e\u0432\u0435 \u043f\u043e\u0434\u0445\u043e\u0434\u0430 RAG (Retrieval-Augmented Generation) \u0432 \u0441\u043e\u0432\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u0445 \u0443\u0441\u043b\u043e\u0432\u0438\u044f\u0445. \u0420\u0430\u0441\u0441\u043c\u043e\u0442\u0440\u0435\u043d\u044b \u0440\u0438\u0441\u043a\u0438 \u043f\u0440\u0438\u043c\u0435\u043d\u0435\u043d\u0438\u044f LLM \u0432 \u0441\u0444\u0435\u0440\u0435 \u044d\u043a\u043e\u043d\u043e\u043c\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0441\u0442\u0438 \u043f\u0440\u0435\u0434\u043f\u0440\u0438\u044f\u0442\u0438\u0439 \u043c\u043e\u043b\u043e\u0447\u043d\u043e\u0439 \u043f\u0440\u043e\u043c\u044b\u0448\u043b\u0435\u043d\u043d\u043e\u0441\u0442\u0438. \u041f\u043e\u0434\u0440\u043e\u0431\u043d\u043e \u0440\u0430\u0437\u043e\u0431\u0440\u0430\u043d\u044b \u0441\u0446\u0435\u043d\u0430\u0440\u0438\u0438 \u043f\u0440\u0438\u043c\u0435\u043d\u0435\u043d\u0438\u044f LLM+RAG \u0432 \u0440\u043e\u0441\u0441\u0438\u0439\u0441\u043a\u043e\u0439 \u043c\u043e\u043b\u043e\u0447\u043d\u043e\u0439 \u043f\u0440\u043e\u043c\u044b\u0448\u043b\u0435\u043d\u043d\u043e\u0441\u0442\u0438 \u2013 \u0441 \u043e\u043f\u0438\u0441\u0430\u043d\u0438\u0435\u043c \u043f\u0440\u043e\u0446\u0435\u0441\u0441\u0430, \u0437\u0430\u0434\u0435\u0439\u0441\u0442\u0432\u043e\u0432\u0430\u043d\u043d\u044b\u0445 \u0434\u0430\u043d\u043d\u044b\u0445, \u0440\u0435\u0448\u0430\u0435\u043c\u044b\u0445 \u0440\u0438\u0441\u043a\u043e\u0432 \u0438 \u0434\u043e\u0441\u0442\u0438\u0433\u043d\u0443\u0442\u044b\u0445 \u0440\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442\u043e\u0432. \u041f\u043e\u043a\u0430\u0437\u0430\u043d\u043e, \u0447\u0442\u043e \u0432 \u0440\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442\u0435 \u0438\u043d\u0442\u0435\u0433\u0440\u0430\u0446\u0438\u044f RAG \u0441 LLM \u0442\u0440\u0430\u043d\u0441\u0444\u043e\u0440\u043c\u0438\u0440\u0443\u0435\u0442 \u0433\u0435\u043d\u0435\u0440\u0430\u0442\u0438\u0432\u043d\u0443\u044e \u043c\u043e\u0434\u0435\u043b\u044c \u0438\u0437 \u043f\u043e\u0442\u0435\u043d\u0446\u0438\u0430\u043b\u044c\u043d\u043e \u043e\u043f\u0430\u0441\u043d\u043e\u0433\u043e \u0438\u043d\u0441\u0442\u0440\u0443\u043c\u0435\u043d\u0442\u0430 \u0432 \u043d\u0430\u0434\u0435\u0436\u043d\u044b\u0439 \u043c\u0435\u0445\u0430\u043d\u0438\u0437\u043c \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0438 \u043f\u0440\u0438\u043d\u044f\u0442\u0438\u044f \u0440\u0435\u0448\u0435\u043d\u0438\u0439 \u2013 \u043e\u0442 \u043c\u043e\u043d\u0438\u0442\u043e\u0440\u0438\u043d\u0433\u0430 \u0443\u0433\u0440\u043e\u0437 \u0444\u0430\u043b\u044c\u0441\u0438\u0444\u0438\u043a\u0430\u0446\u0438\u0438 \u0434\u043e \u043f\u0440\u043e\u0433\u043d\u043e\u0437\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u044f \u044d\u043a\u043e\u043d\u043e\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0445 \u043f\u043e\u043a\u0430\u0437\u0430\u0442\u0435\u043b\u0435\u0439 \u0441 \u0443\u0447\u0435\u0442\u043e\u043c \u043e\u0442\u0440\u0430\u0441\u043b\u0435\u0432\u043e\u0439 \u0441\u043f\u0435\u0446\u0438\u0444\u0438\u043a\u0438. The article examines the features of reducing the risks of using LLM (Large Language Model) in the field of economic security of dairy industry enterprises based on the RAG (Retrieval-Augmented Generation) approach in modern conditions. The risks of using LLM in the field of economic security of dairy industry enterprises are considered. The scenarios of LLM+RAG application in the Russian dairy industry are analyzed in detail, describing the process, the data involved, the risks to be solved and the results achieved. It is shown that as a result, the integration of RAG with LLM transforms the generative model from a potentially dangerous tool into a reliable decision support mechanism, from monitoring fraud threats to forecasting economic indicators based on industry specifics.",
+    "authors": [
+      "\u0418.\u0412. \u0415\u0440\u043c\u0430\u043a\u043e\u0432",
+      "\u0412.\u0412. \u0424\u0438\u043b\u0430\u0442\u043e\u0432"
+    ],
+    "categories": [
+      "Innovative economy: information, analytics, forecasts"
+    ],
+    "primary_category": "Innovative economy: information, analytics, forecasts",
+    "published": "2026-06-15",
+    "updated": "2026-06-17",
+    "abs_url": "https://doi.org/10.47576/2949-1894.2026.7.7.023",
+    "pdf_url": "",
+    "comment": "journal-article, Innovative economy: information, analytics, forecasts, Publishing house Pegas"
+  },
+  {
+    "paper_id": "10.2139/ssrn.4895062",
+    "title": "Graph Retrieval-Augmented Generation for Large Language Models: A Survey",
+    "summary": "Large Language Models (LLMs) demonstrate general knowledge, but they suffer when specifically needed knowledge is not present in their training set. Two approaches to ameliorating this, without retraining , are 1) prompt engineering and 2) Retrieval-Augmented Generation (RAG). RAG is a form of prompt engineering, insofar as relevant lexical snippets retrieved from RAG corpora are vectorized and aggregated with prompts. However, RAG documents are often noisy, i.e., while relevant to a given prompt, they can contain much other information that obfuscates the desired snippet. If the purpose of pre-training a LLM on massive and general corpora is to engender a generally applicable model, RAG is not: it is a means of LLM optimization, and as such, RAG document selection must be precise, not general. For expert tasks, it is imperative that a RAG corpus be as noise-free as possible, in much the same way a good prompt should be free of irrelevant text. Knowledge Graphs (KGs) provide a concise means of representing domain knowledge free of noisy information. This paper surveys work incorporating KGs with LLM RAG, intending to equip scientists with a better understanding of this novel research area for future work.",
+    "authors": [
+      "Tyler Procko",
+      "Omar Ochoa"
+    ],
+    "categories": [
+      "posted-content"
+    ],
+    "primary_category": "posted-content",
+    "published": "2024-01-01",
+    "updated": "2026-07-29",
+    "abs_url": "https://doi.org/10.2139/ssrn.4895062",
+    "pdf_url": "",
+    "comment": "posted-content, Elsevier BV"
+  },
+  {
+    "paper_id": "10.36227/techrxiv.177272838.89432844/v1",
+    "title": "A Survey of (Deep RAG) Deep Retrieval Augmented Generation and Reasoning in Large Language Models",
+    "summary": "Retrieval-Augmented Generation (RAG) has emerged as a powerful paradigm for combining large language models with external knowledge sources to produce accurate, context-aware, and verifiable outputs. In this survey, we focus on an advanced instantiation of this paradigm, referred to as Deep RAG, which integrates reasoning, memory, and multi-step planning into end-to-end research workflows. We provide a structured overview of Deep RAG systems, covering key components such as query planning, information retrieval, memory management, and answer generation, as well as practical optimization techniques including supervised fine-tuning, iterative self-evolving, and agentic reinforcement learning. We analyze different planning strategies, adaptive retrieval mechanisms, conflict resolution methods, and multimodal synthesis, highlighting both their strengths and limitations. By categorizing approaches according to workflow types, reasoning strategies, and optimization paradigms, we clarify the current landscape and identify open challenges for evaluation, scalability, and multimodal reasoning. This survey aims to provide a comprehensive roadmap for designing flexible, reliable, and intelligent Deep RAG systems capable of performing complex, real-world research tasks with minimal human supervision.",
+    "authors": [
+      "Lihui Liu"
+    ],
+    "categories": [
+      "posted-content"
+    ],
+    "primary_category": "posted-content",
+    "published": "2026-03-05",
+    "updated": "2026-06-12",
+    "abs_url": "https://doi.org/10.36227/techrxiv.177272838.89432844/v1",
+    "pdf_url": "https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.177272838.89432844/v1",
+    "comment": "posted-content, Institute of Electrical and Electronics Engineers (IEEE)"
+  },
+  {
+    "paper_id": "10.3390/app16052244",
+    "title": "Hybrid Retrieval-Augmented Generation: Semantic and Structural Integration for Large Language Model Reasoning",
+    "summary": "Recent GraphRAG methods based on knowledge graphs (KGs) primarily rely on either under-reasoning or a structural path-level retriever, which prevents them from jointly capturing fine-grained semantic relevance and explicit multi-hop reasoning paths. This separation often results in semantic mismatch\u2014where logical links are missing\u2014or structural over-constraint in reasoning\u2014 where rigid dependencies limit flexible reasoning\u2014thereby degrading both answer accuracy and the reliability of evidence in complex KGQA tasks. To address these issues, we propose HybRAG, a hybrid retrieval framework that synergistically integrates a semantic node-level retriever and structural path-level retriever. HybRAG constructs a hybrid subgraph that jointly reflects the semantic proximity of entities and the relational structures encoded in the KG. Furthermore, we incorporate retrieval-augmented fine-tuning, which enables the model to internalize advanced reasoning strategies for interpreting disparate semantic and structural signals, rather than merely memorizing domain facts. Through extensive experiments on the WebQSP and CWQ benchmarks, we demonstrate that HybRAG effectively bridges the gap between LLM-centric semantic approaches and GNN-centric structural approaches, outperforming single-retriever baselines. Our findings, including detailed sensitivity and ablation analyses, provide empirical evidence that the systematic alignment of semantic and structural signals is essential for ensuring the reasoning reliability and scalability of next-generation GraphRAG systems.",
+    "authors": [
+      "Hyewon Lee",
+      "Sungsu Lim"
+    ],
+    "categories": [
+      "Applied Sciences"
+    ],
+    "primary_category": "Applied Sciences",
+    "published": "2026-02-26",
+    "updated": "2026-05-14",
+    "abs_url": "https://doi.org/10.3390/app16052244",
+    "pdf_url": "https://www.mdpi.com/2076-3417/16/5/2244/pdf",
+    "comment": "journal-article, Applied Sciences, MDPI AG"
+  },
+  {
+    "paper_id": "10.20944/preprints202604.0339.v1",
+    "title": "Retrieval-Augmented Large Language Model Agents for Automated Scientific Literature Review Generation",
+    "summary": "This study investigates a method that integrates retrieval-augmented mechanisms into large language model agents for scientific literature review generation. The approach addresses the limitations of traditional review models that rely on parametric knowledge with insufficient timeliness and limited coverage. Incorporating external document retrieval and dynamic information fusion into the generation process enhances the accuracy and completeness of the output. The overall framework consists of query encoding, semantic retrieval, document filtering, knowledge fusion, language modeling, task planning, memory storage, and reinforcement optimization, forming a closed loop of retrieval, understanding, and generation. Relevant document fragments are first retrieved through semantic vector search to ensure comprehensive and reliable information sources. These external representations are then integrated with the internal embeddings of the language model through weighted fusion, which preserves fluency while maintaining factual grounding. The task planning module constrains logical flow and text structure, and reinforcement learning optimization further improves relevance and consistency. Comparative experiments on large-scale scientific literature datasets demonstrate that the method outperforms existing approaches on ROUGE, BLEU, METEOR, and diversity metrics, validating its effectiveness and practicality. The findings show that combining retrieval augmentation with agent architectures can significantly improve coverage, accuracy, and language quality in review generation, providing a feasible solution for knowledge organization in complex literature environments.",
+    "authors": [
+      "Ruotong Wang",
+      "Nyutian Long",
+      "Shunqi Liu",
+      "Yuxi Wang",
+      "Zhen Qi",
+      "Huajun Zhang"
+    ],
+    "categories": [
+      "posted-content"
+    ],
+    "primary_category": "posted-content",
+    "published": "2026-04-06",
+    "updated": "2026-07-30",
+    "abs_url": "https://doi.org/10.20944/preprints202604.0339.v1",
+    "pdf_url": "",
+    "comment": "posted-content, MDPI AG"
+  },
+  {
+    "paper_id": "10.2139/ssrn.6761739",
+    "title": "AI-Powered Smart Advisory System for Precision Agriculture Using Large Language Models and Retrieval-Augmented Generation",
+    "summary": "An AI-powered smart advisory system for Precision Agriculture leveraging Large Language Models and Retrieval-Augmented Generation is presented in this paper. The proposed framework generates personalized, contextual, and explainable agricultural recommendations based on farmers' queries as well as soil characteristics, weather conditions, crop information and agricultural domain-specific knowledge. A retrieval augmented generation approach is employed to gather the relevant agricultural information prior to generating advisory responses, thus preventing any hallucinations or out-of-date recommendations. Publicly available agricultural datasets have been used in this study such as crop recommendation dataset which contains soil and environment parameters, NASA POWER weather data, and information about plant diseases in the PlantVillage dataset. The effectiveness of the proposed RAG-Large Language Model based system is compared to a simple Large Language Model advisory system and to the rule-based recommendation systems in terms of accuracy, relevance of advice provided, precision of retrieval, explainability of the advice provided, and response latency.",
+    "authors": [
+      "Jahnavi Bellapukonda"
+    ],
+    "categories": [
+      "posted-content"
+    ],
+    "primary_category": "posted-content",
+    "published": "2026-01-01",
+    "updated": "2026-05-20",
+    "abs_url": "https://doi.org/10.2139/ssrn.6761739",
+    "pdf_url": "",
+    "comment": "posted-content, Elsevier BV"
+  },
+  {
+    "paper_id": "10.63646/kpqm1958",
+    "title": "The Age of Autonomous Agents: A Bibliometric Review of Agentic AI Architectures, Applications, and Emerging Challenges",
+    "summary": "The rapid evolution of large language models (LLMs) has catalyzed a shift from passive AI systems toward autonomous agentic architectures capable of reasoning, memory, tool use, and multi-agent collaboration. This bibliometric review characterizes the emerging field through 810 publications retrieved from the Web of Science Core Collection for the period 2023\u20132025. Annual output rose sharply over this window\u2014from 4 publications in 2023 to 96 in 2024 and 710 in 2025\u2014accompanied by a parallel rise in citations, indicating rapid mainstream adoption. Author-keyword analysis reveals a landscape dominated by large language models, artificial intelligence, and multi-agent systems, with agentic AI, generative AI, and retrieval-augmented generation (RAG) emerging as core themes. Research output is geographically concentrated, led by China and the United States, and is distributed across a broad range of engineering, applied-science, and domain-specific journals rather than a single specialist venue, reflecting the field's cross-disciplinary uptake. Synthesizing this corpus, we organize the technical landscape around reasoning, memory, tool integration and RAG, and multi-agent orchestration; survey application domains spanning healthcare, scientific discovery, education, and software engineering, with emerging activity in finance and law; and analyze the principal challenges\u2014hallucination, trust and robustness, inter-agent coordination, scalability, and governance. The review provides a structured, evidence-based map of agentic AI research to orient researchers and practitioners navigating this rapidly evolving field.",
+    "authors": [
+      "Ben J. Weber",
+      "Clara M. Hofmann",
+      "Amara N. Okoye"
+    ],
+    "categories": [
+      "Journal of AI Analytics and Applications"
+    ],
+    "primary_category": "Journal of AI Analytics and Applications",
+    "published": "2026-06-30",
+    "updated": "2026-07-17",
+    "abs_url": "https://doi.org/10.63646/kpqm1958",
+    "pdf_url": "https://inatgi.net/index.php/jaiaa/article/download/806/945",
+    "comment": "journal-article, Journal of AI Analytics and Applications, Institute of Advanced Technology and Green Innovation LLC"
+  },
+  {
+    "paper_id": "10.2139/ssrn.6386988",
+    "title": "Agentic Retrieval-Augmented Generation Systems for Medical Decision Support: A Comprehensive Survey",
+    "summary": "The introduction of Agentic Retrieval-Augmented Generation Technology is a breakthrough in the field of Medical Artificial Intelligence, allowing autonomous agents to coordinate complex clinical workflows, integrate evidence into the patient\u2019s care cycle, and supply decision-making support to health care professionals and patients. In this manuscript, we will offer a comprehensive analysis of the architectures of Agentic RAG technology and its numerous applications and approaches within healthcare. More specifically, we will systematically evaluate the various types of multi-agentic systems that may be employed for specific professional and clinical tasks, such as diagnostic reasoning, medical question answering, report generation, drug discovery, and optimizing overall healthcare delivery. Aspects of the technical architecture that will be addressed in this review are the integration of knowledge graphs to represent knowledge, multi-modal reasoning capabilities, mechanisms to support adherence to clinical guidelines, and creation of interpretable decision-making frameworks. In addition to these key technological developments, the author will also address a variety of challenges encountered when developing agentic RAG systems, including clinical validation, collaboration between health care providers and AI, ethical issues, and deploying agentic RAG technology in health care settings that have limited resources. Lastly, this review provides an overarching conceptual framework for understanding how agentic RAG technology can assist in supporting physicians, nursing staff, health care personnel, and patients with a variety of tasks across multiple disciplines, while also supporting many of the key safety, privacy, and responsible considerations related to AI in health care. This review identifies architecturally based patterns in medical agentic systems.",
+    "authors": [
+      "Venkitesh S. Anand",
+      "Akhil V. V."
+    ],
+    "categories": [
+      "posted-content"
+    ],
+    "primary_category": "posted-content",
+    "published": "2026-01-01",
+    "updated": "2026-03-13",
+    "abs_url": "https://doi.org/10.2139/ssrn.6386988",
+    "pdf_url": "",
+    "comment": "posted-content, Elsevier BV"
+  },
+  {
+    "paper_id": "10.2139/ssrn.6741395",
+    "title": "Patch-Aware Retrieval-Augmented Generation for Large Language Model Decision Support in Transportation Infrastructure Delivery",
+    "summary": "Transportation infrastructure agencies rely on large, frequently updated specification documents to support materials acceptance, contract administration, and construction compliance. However, after the base specifications are published, agencies may issue official amendment bulletins that revise, replace, or remove selected subsections. Conventional large language model (LLM) systems with retrieval-augmented generation (RAG) can retrieve relevant base text, but may overlook these amendments, producing answers that appear correct while being contractually outdated. This study proposes DS-TID \u2014 Decision Support for Transportation Infrastructure Delivery \u2014 an amendment-aware RAG framework for LLM-based decision support in transportation construction specifications. DS-TID instantiates a Patch-Aware RAG architectural pattern in which a stable base specification index is augmented at retrieval time by a section-identifier-keyed amendment registry. When a retrieved base section is affected by an active bulletin, the corresponding amendment is deterministically injected into the LLM prompt as authoritative evidence, together with change-type and effective-date metadata. This design preserves the stability of the base index and avoids re-embedding the full corpus whenever new bulletins are issued. The framework also integrates hierarchy-preserving chunking, row-level table evidence units, adaptive dense\u2013lexical retrieval fusion, citation-constrained generation, and conservative abstention. We implement DS-TID using the Standard Specifications for Road and Bridge Construction, the Division Construction and Materials Material Procedures, and active Baseline Document Change (BDC) bulletins. On a 100-query expert-annotated benchmark, the system achieves 0.90 end-to-end accuracy and correctly abstains on all out-of-scope queries in the tested partition. On a 14-question practitioner-grade benchmark, it reaches 94% aggregate response-quality accuracy, with clear gains over baseline RAG systems and commercial-chatbot baselines. The results show that reliable LLM decision support for transportation infrastructure delivery requires not only semantic retrieval, but also up-to-date amendments, preserved document structure, and clear refusal to answer when the evidence is insufficient.",
+    "authors": [
+      "Dan Liu",
+      "Hao Wang",
+      "Hao Frank Yang",
+      "Maria Santo",
+      "Bin Hu",
+      "Giri Venkiteela"
+    ],
+    "categories": [
+      "posted-content"
+    ],
+    "primary_category": "posted-content",
+    "published": "2026-01-01",
+    "updated": "2026-05-10",
+    "abs_url": "https://doi.org/10.2139/ssrn.6741395",
+    "pdf_url": "",
+    "comment": "posted-content, Elsevier BV"
+  },
+  {
+    "paper_id": "10.55041/isjem07213",
+    "title": "Speculative Retrieval-Augmented Generation for Cost-Efficient Large Language Model Inference",
+    "summary": "This work focuses on the two crucial bottlenecks in Retrieval-Augmented Generation (RAG): high inference latency and expensive computation cost. RAG enhances the factual correctness of Large Language Models (LLMs) by utilizing external knowledge sources; However, the auto-To achieve a good recall, the system applies a two-way retrieval mechanism: Dense retrieval: This module uses BAAI/bge-small-en-v1.5 to create a 384-dimensional embedding space, where queries and documents are mapped. The embeddings are stored in a FAISS IndexFlatL2. Sparse retrieval: This module uses TF-IDF vectorization to capture an exact keyword match. Reranking: A simple heuristic mechanism of matching substrings of the query terms in the documents selected to perform the final step of ranking them for prompt introduce a novel speculative RAG framework that combines hybrid retrieval with speculative decoding. Our framework employs hybrid dense vector search (BGE-small) and sparse keyword search (TF-IDF) for enhanced recall followed by a lightweight re-ranker model. A compact draft model (TinyLlama-1.1B) makes tentative future token generation, then a larger verifier model (Mistral-7B) checks the correctness of the candidate token. Empirical experiments demonstrate 33% and 29% improvement in inference latency and token reduction, respectively, compared to the baseline of a typical 7B model, while retaining 94% accuracy on factoid tasks. Key Words: Retrieval-Augmented Generation, Speculative Decoding, Large Language Models, Inference Optimization, Hybrid Retrieval",
+    "authors": [
+      "Dr. Sumalatha P",
+      "Manoj Kumar"
+    ],
+    "categories": [
+      "International Scientific Journal of Engineering and Management"
+    ],
+    "primary_category": "International Scientific Journal of Engineering and Management",
+    "published": "2026-05-06",
+    "updated": "2026-05-06",
+    "abs_url": "https://doi.org/10.55041/isjem07213",
+    "pdf_url": "",
+    "comment": "journal-article, International Scientific Journal of Engineering and Management, Edtech Publishers (OPC) Private Limited"
+  },
+  {
+    "paper_id": "10.7717/peerj-cs.3882",
+    "title": "A large language model-driven scientific literature surveys generation framework based on multi-agents and retrieval-augmented generation",
+    "summary": "The escalating volume and complexity of scientific publications have intensified the demand for intelligent literature survey tools. Current systems, whether based on large language models (LLMs) or retrieval augmented generation (RAG), often struggle with terminological accuracy and semantic coherence, limiting their practical adoption. To address this, we propose a novel LLM-driven framework that synergizes multi-agent collaboration with RAG to enhance both the structural coherence of full-document surveys and the factual reliability of generated content. On the SciReviewGen benchmark, our model achieves Recall-Oriented Understudy for Gisting Evaluation (ROUGE)-1/2/L scores of 42.84/16.57/18.25, outperforming strong baselines including Query-weighted Fusion-in-Decoder (QFiD), Fusion-in-Decoder (FiD), BigBird, GPT-4o-mini, and Llama4-17B-16E. The framework also excels in human-aligned evaluation, attaining an LLM-as-judge score of 0.70, surpassing QFiD by +0.29. Ablation studies confirm the critical role of both RAG and multi-agent design: removing RAG reduces ROUGE-2/L by 2.28/3.19, while single-agent ablation further decreases ROUGE-1 by 1.15. Our work not only advances the state of the art in automated literature synthesis but also offers a scalable solution to mounting scholarly information overload.",
+    "authors": [
+      "Ruihua Qi",
+      "Haobo Lyu",
+      "Weilong Li",
+      "Shuqin Chen",
+      "Xu Guo"
+    ],
+    "categories": [
+      "PeerJ Computer Science"
+    ],
+    "primary_category": "PeerJ Computer Science",
+    "published": "2026-05-27",
+    "updated": "2026-05-27",
+    "abs_url": "https://doi.org/10.7717/peerj-cs.3882",
+    "pdf_url": "https://peerj.com/articles/cs-3882.pdf",
+    "comment": "journal-article, PeerJ Computer Science, PeerJ"
+  },
+  {
+    "paper_id": "10.21079/11681/50309",
+    "title": "Microsoft Azure artificial intelligence / machine learning hackathon for development of retrieval-augmented generation large language model",
+    "summary": "The US Army Corps of Engineers (USACE) Civil Works (CW) research and development (R&D) mission is to address challenging environmental sustainability problems through innovative science and engineering, which helps to ensure a safer, more prosperous, and more resilient nation. To achieve this, the US Army Engineer Research and Development Center (ERDC) plans, executes, leads, and directs many R&D programs in coordination with USACE Headquarters, Districts, and Divisions through its multiple strategic focus areas, which include infrastructure, water modeling, crisis preparedness, ecosystem, sediment management, data, artificial intelligence, and robotics. In this process, much information is generated, including internal progress reviews, financial reports, scopes of work, work package planning, and success stories.",
+    "authors": [
+      "Janet L. Autrey",
+      "Lacey S. Duckworth",
+      "Ashly N. Horner",
+      "Thomas Sigler",
+      "Victoria D. Moore"
+    ],
+    "categories": [
+      "report"
+    ],
+    "primary_category": "report",
+    "published": "2026-07-01",
+    "updated": "2026-07-10",
+    "abs_url": "https://doi.org/10.21079/11681/50309",
+    "pdf_url": "",
+    "comment": "report, U.S. Army Engineer Research and Development Center"
+  },
+  {
+    "paper_id": "10.2139/ssrn.6713979",
+    "title": "A Survey of Agentic GraphRAG: From Retrieval-augmented Generation to Graph-native Agents",
+    "summary": "<div> This survey provides a comprehensive analysis of Agentic GraphRAG, an emerging paradigm that integrates Graph-based Retrieval-Augmented Generation (RAG) with Agentic RAG.&nbsp;<span>While large language models know a lot, their knowledge is frozen at training time and they often suffer from hallucinations. RAG is the standard workaround: before the model answers, fetch relevant text from an external corpus and generate response based on the it. Two lines of work have pushed RAG in different directions: (1) GraphRAG changes what the model retrieves from: instead of a pile of text chunks indexed by similarity, it builds a knowledge graph of entities and their relations, summarizes densely connected regions, and retrieves over that. (2) Agentic RAG changes how retrieval happens: moving beyond one shot generation based on user query, an agent plans, acts, critiques its own work, keeps memory across steps, and then retrieves multiple times as needed. Recent work combines the two, with Karpathy's LLM Wiki as a salient example of non-tech-savvy solutions. The agent's planning, acting, critiquing, and remembering all operate over graph operations. The graph stops being a passive lookup table and becomes the space the agent moves through. This survey treats such combination as a research area in its own right. We organize recent primary papers on a 4x3 grid (four agent roles vs. three graph operations) grounded in a central observation: pure GraphRAG and standalone Agentic RAG each possess recurring failure modes, and the combination of the two paradigms can effectively mitigate these. The body of the survey covers seven method families that populate the grid: single-agent iterative traversal, self-evolving GraphRAG, RL-trained graph walkers, multi-agent graph systems, agentic graph construction, persistent graph memory, and hybrid structured\u2013unstructured retrieval. Three application areas ground the discussion: medicine, legal reasoning, and cyber threat intelligence. Furthermore, recent papers reach directly opposing conclusions about whether graphs are still needed once an agent is in the loop. We trace where the disagreement comes from, and discuss evaluation protocols that jointly score agent trajectories and retrievals, alongside the adversarial robustness of agent\u2013graph systems.</span> </div>",
+    "authors": [
+      "Zihan Chen",
+      "Lei Zheng",
+      "Di Zhu"
+    ],
+    "categories": [
+      "posted-content"
+    ],
+    "primary_category": "posted-content",
+    "published": "2026-01-01",
+    "updated": "2026-05-13",
+    "abs_url": "https://doi.org/10.2139/ssrn.6713979",
+    "pdf_url": "",
+    "comment": "posted-content, Elsevier BV"
+  },
+  {
+    "paper_id": "10.20944/preprints202602.0996.v1",
+    "title": "Clinical Large Language Models with Multi-Stage Instruction Tuning and Advanced Retrieval-Augmented Generation",
+    "summary": "The demand for efficient and accurate Clinical Decision Support Systems (CDSS) is growing rapidly, driven by the escalating volume of medical data. While Large Language Models (LLMs) offer significant potential, their direct application in healthcare is limited by issues like hallucinations and lack of domain-specific knowledge. Retrieval-Augmented Generation (RAG) addresses these challenges by grounding LLMs with external knowledge, and recent lightweight RAG-based CDSS have shown promise. Building on this, we propose Enhanced Clinical RAG-LLM (ECRAG-LLM), a novel system designed to elevate performance in complex clinical scenarios. ECRAG-LLM utilizes a robust yet lightweight Mistral-based LLM, integrated with a multi-stage instruction tuning strategy that first adapts to general medical knowledge and then reinforces context-aware and causal reasoning using a custom dataset of structured clinical cases. We employ BioSimCSE for domain-specific embeddings and introduce an enhanced RAG architecture featuring hybrid retrieval, cross-encoder-based contextual re-ranking, and context summarization to optimize retrieved information. Extensive experiments on medical benchmarks demonstrate that ECRAG-LLM consistently outperforms baseline lightweight fine-tuned LLMs, achieving significant improvements in diagnostic accuracy, treatment appropriateness, and explanatory quality, particularly in tasks requiring deep clinical reasoning. An ablation study confirms the synergistic contributions of our innovations, and an error analysis highlights a substantial reduction in critical errors, positioning ECRAG-LLM as a more reliable and intelligent solution for resource-constrained clinical environments.",
+    "authors": [
+      "Donald Martin",
+      "Blake Bowman"
+    ],
+    "categories": [
+      "posted-content"
+    ],
+    "primary_category": "posted-content",
+    "published": "2026-02-12",
+    "updated": "2026-02-13",
+    "abs_url": "https://doi.org/10.20944/preprints202602.0996.v1",
+    "pdf_url": "",
+    "comment": "posted-content, MDPI AG"
+  },
+  {
+    "paper_id": "10.36227/techrxiv.176297583.39945193/v1",
+    "title": "A Multi-Agent Cybersecurity Assessment System Leveraging Large Language Models with Retrieval-Augmented Generation, IOC Extraction, and SIEM Integration",
+    "summary": "Security teams are increasingly challenged to interpret complex threat data and respond rapidly with accurate, context-aware guidance. Large language models (LLMs) can assist, but their latency, cost, and data-privacy risks make them unsuitable for most operational environments. Our proposed model (CyberXP Agent) presents a practical alternative, a lightweight, modular framework that combines Supervised Fine-Tuning (SFT), Retrieval-Augmented Generation (RAG), and Agentic-AI orchestration using a 1-billion-parameter LLaMA 3.2 model. The system integrates domain-specific fine-tuning, vector-based semantic retrieval, IOC extraction, multi-agent coordination, and human-in-the-loop feedback to deliver grounded, structured cyber-threat assessments. Empirical evaluation shows that our proposed agent achieves performance competitive with larger LLMs while maintaining real-time responsiveness, transparency, and privacy making it suitable for integration into enterprise security workflows.",
+    "authors": [
+      "Rasoul Abaryan"
+    ],
+    "categories": [
+      "posted-content"
+    ],
+    "primary_category": "posted-content",
+    "published": "2025-11-12",
+    "updated": "2026-06-12",
+    "abs_url": "https://doi.org/10.36227/techrxiv.176297583.39945193/v1",
+    "pdf_url": "https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.176297583.39945193/v1",
+    "comment": "posted-content, Institute of Electrical and Electronics Engineers (IEEE)"
+  },
+  {
+    "paper_id": "10.2139/ssrn.4910081",
+    "title": "Biomedrag: A Retrieval Augmented Large Language Model for Biomedicine",
+    "summary": "Retrieval-augmented generation (RAG) offers a solution by retrieving knowledge from an established database to avoid hallucination of large language models (LLM). However, these models utilize specialized cross-attention mechanisms to help LLMs encode the retrieved text, hindering the application of RAG in closed LLMs (such as GPT-4). Additionally, these models retrieve information at the sentence or paragraph level, potentially introducing noise and affecting the generation quality. To address these issues, we propose a novel BiomedRAG framework that directly feeds automatically retrieved chunk-based documents into the LLM. Our evaluation of BiomedRAG across four biomedical natural language processing tasks using eight datasets demonstrates that our proposed framework not only improves the performance of LLMs 12.12% averagely but also achieves state of-the-art results compared to various baseline models by 5.33%. The BiomedRAG paves the way for more accurate and adaptable LLM applications in the biomedical domain.",
+    "authors": [
+      "Mingchen Li",
+      "Halil Kilicoglu",
+      "Hua Xu",
+      "rui zhang"
+    ],
+    "categories": [
+      "posted-content"
+    ],
+    "primary_category": "posted-content",
+    "published": "2024-01-01",
+    "updated": "2026-07-29",
+    "abs_url": "https://doi.org/10.2139/ssrn.4910081",
+    "pdf_url": "",
+    "comment": "posted-content, Elsevier BV"
+  },
+  {
+    "paper_id": "10.2139/ssrn.6926438",
+    "title": "Retrieval-augmented Generation (RAG), Generative AI, and Agentic AI Governance: An Integrated Enterprise Governance Prioritization Architecture",
+    "summary": "Enterprise adoption of artificial intelligence (AI) systems, including Generative AI (GenAI), Retrieval-Augmented Generation (RAG), and agentic AI, is advancing faster than many organizations can adapt their governance, audit, cybersecurity, and executive oversight practices. This paper develops a proposed integrated AI governance prioritization architecture using a design-science research approach, supported by exploratory platform-risk analysis, a reproducible platform-risk dataset, a Monte Carlo robustness assessment, a framework coverage matrix, a Governance Priority Score (GPS)-based demonstration, and a public-document relevance assessment. The primary contribution is an integrated governance decision-support architecture that uses the Enterprise AI Platform Taxonomy (EAPT) to estimate platform burden, the Enterprise AI Risk Taxonomy (EART) to organize governance-risk exposure, the Enterprise AI Governance Maturity Model (EAGM) to represent organizational readiness, and the Integrated Agentic AI Governance Framework (IAGF) to identify agentic AI oversight requirements within a unified workflow. These components are operationally connected through GPS, which links platform burden, governancerisk gaps, organizational readiness, agentic runtime-control needs, and executive decision support. The proposed architecture draws upon NIST AI RMF, NIST AI 600-1, ISO/IEC 42001, COBIT, OWASP LLM Top 10, MITRE ATLAS, the EU AI Act, and related AI governance literature. A rubric-based analytical dataset covering 19 enterprise AI platforms evaluates each platform across eight subdimensions, with final platform-risk scores computed as the arithmetic mean of data access scope, operational autonomy, tool/API integration breadth, external connectivity, governance burden, cybersecurity exposure, adoption and shadow-AI risk, and supply-chain integrity. TThe expanded scoring method produces high rank stability relative to the original final-score dataset, with Spearman's \u03c1 = 0.996, and remains directionally stable under coding-uncertainty stress testing; these results are interpreted only as internal coding stability and robustness, not external validation. Public evidence from U.S. government agencies, universities, healthcare systems, and financial institutions is used to assess architecture relevance and observability, not to claim organizational effectiveness. The paper contributes a bounded design-science foundation for future inter-rater reliability testing, Delphi expert validation, organizational pilots, psychometric evaluation, and dashboard usability assessment.",
+    "authors": [
+      "Audrey Rah",
+      "Sven Hahues"
+    ],
+    "categories": [
+      "posted-content"
+    ],
+    "primary_category": "posted-content",
+    "published": "2026-01-01",
+    "updated": "2026-07-29",
+    "abs_url": "https://doi.org/10.2139/ssrn.6926438",
+    "pdf_url": "",
+    "comment": "posted-content, Elsevier BV"
+  },
+  {
+    "paper_id": "10.2196/preprints.106157",
+    "title": "Does retrieval-augmented generation impact medical students\u2019 perceptions of large language models? (Preprint)",
+    "summary": "BACKGROUND There is evidence of rapid adoption of large language models (LLMs) in undergraduate medical education, with medical students using it to support their learning. This raises concerns particularly around the accuracy of LLM-generated information students are learning. Retrieval-augmented generation (RAG), which grounds a LLM in curated materials, may be a strategy to improve their accuracy. OBJECTIVE This study investigates if grounding LLM outputs in verifiable sources using RAG impacts trust and perceived usability amongst medical students. METHODS In a four-month qualitative study, second-year medical students at Bristol Medical School used a RAG-enabled LLM (NotebookLM) to help them learn course content. Following this, their perspectives were explored using a focus group and survey was. Qualitative data was analysed using thematic analysis and was supplemented by Likert scale data. RESULTS RAG-based LLMs were perceived as more reliable than standard LLM responses mainly due to the transparency of and control over information sources. The system functioned as an accessible, on-demand learning resource, improving efficiency and supporting self-directed study. Students continued to use strategies to cross check generated information. They demonstrated some awareness of ethical concerns, mostly around the environmental impact of LLMs and data privacy. CONCLUSIONS These findings suggest that RAG may enhance students\u2019 trust in LLM outputs while maintaining their benefit as a flexible \u2018study partner\u2019. It highlights RAG as a strategy that educators can use to support students who use LLMs in the context of increasing. However, the impact of RAG-based LLMs over a longer period and on learning outcomes requires further evaluation.",
+    "authors": [
+      "Rohin Athavale",
+      "Alexander Cresswell",
+      "Alice Huffman"
+    ],
+    "categories": [
+      "posted-content"
+    ],
+    "primary_category": "posted-content",
+    "published": "2026-07-03",
+    "updated": "2026-07-06",
+    "abs_url": "https://doi.org/10.2196/preprints.106157",
+    "pdf_url": "",
+    "comment": "posted-content, JMIR Publications Inc."
+  },
+  {
+    "paper_id": "10.21203/rs.3.rs-10012178/v1",
+    "title": "Retrieval-Augmented Generation (RAG), Generative AI, and Agentic AI Governance: An Integrated Enterprise Governance Prioritization Architecture",
+    "summary": "Enterprise adoption of artificial intelligence (AI) systems, including Generative AI (GenAI), Retrieval-Augmented Generation (RAG), and agentic AI, is advancing faster than many organizations can adapt their governance, audit, cybersecurity, and executive oversight practices. This paper develops a proposed integrated AI governance prioritization architecture using a design-science research approach, supported by exploratory platform-risk analysis, a reproducible platform-risk dataset, a Monte Carlo robustness assessment, a framework coverage matrix, a Governance Priority Score (GPS)-based demonstration, and a public-document relevance assessment. The primary contribution is an integrated governance decision-support architecture that uses the Enterprise AI Platform Taxonomy (EAPT) to estimate platform burden, the Enterprise AI Risk Taxonomy (EART) to organize governance-risk exposure, the Enterprise AI Governance Maturity Model (EAGM) to represent organizational readiness, and the Integrated Agentic AI Governance Framework (IAGF) to identify agentic AI oversight requirements within a unified workflow. These components are operationally connected through GPS, which links platform burden, governancerisk gaps, organizational readiness, agentic runtime-control needs, and executive decision support. The proposed architecture draws upon NIST AI RMF, NIST AI 600-1, ISO/IEC 42001, COBIT, OWASP LLM Top 10, MITRE ATLAS, the EU AI Act, and related AI governance literature. A rubric-based analytical dataset covering 19 enterprise AI platforms evaluates each platform across eight subdimensions, with final platform-risk scores computed as the arithmetic mean of data access scope, operational autonomy, tool/API integration breadth, external connectivity, governance burden, cybersecurity exposure, adoption and shadow-AI risk, and supply-chain integrity. TThe expanded scoring method produces high rank stability relative to the original final-score dataset, with Spearman\u2019s \u03c1 = 0.996, and remains directionally stable under coding-uncertainty stress testing; these results are interpreted only as internal coding stability and robustness, not external validation. Public evidence from U.S. government agencies, universities, healthcare systems, and financial institutions is used to assess architecture relevance and observability, not to claim organizational effectiveness. The paper contributes a bounded design-science foundation for future inter-rater reliability testing, Delphi expert validation, organizational pilots, psychometric evaluation, and dashboard usability assessment.",
+    "authors": [
+      "Audrey Rah",
+      "Sven Hahues"
+    ],
+    "categories": [
+      "posted-content"
+    ],
+    "primary_category": "posted-content",
+    "published": "2026-06-15",
+    "updated": "2026-06-15",
+    "abs_url": "https://doi.org/10.21203/rs.3.rs-10012178/v1",
+    "pdf_url": "https://www.researchsquare.com/article/rs-10012178/v1",
+    "comment": "posted-content, Springer Science and Business Media LLC"
+  },
+  {
+    "paper_id": "10.1007/s10278-026-02086-9",
+    "title": "JADE-Plus: A Multimodal Agentic Retrieval-Augmented Generation Large Language Framework for Diagnostic Support in Jawbone Lesions: Development and Technical Validation Study",
+    "summary": "Diagnosing jawbone lesions in oral and maxillofacial radiology remains challenging due to overlapping radiological features and the need for integrated clinical reasoning. This study aimed to develop and validate JADE-Plus, a novel multimodal, agent-controlled retrieval-augmented generation (RAG) framework for diagnostic decision support in jawbone lesion assessment. JADE-Plus was implemented as a cloud-based, tablet-optimized system integrating a vision-language model (VLM) for panoramic radiograph analysis, a knowledge-grounded RAG module, and an agentic verification loop for diagnostic fusion and re-ranking. The system was evaluated using 40 representative jawbone lesion cases and compared with JADE, GPT-5.4, GPT-5.4 VLM, and ORAD. Performance was assessed using Top-1 and Top-3 accuracy, ablation and statistical analyses, intra-model stability, and response time. JADE-Plus achieved the highest diagnostic performance, with a Top-1 accuracy of 90% (36/40; 95% CI 76\u201397%) and a Top-3 accuracy of 100%, with no missed diagnoses. Cochran\u2019s Q test demonstrated significant differences among models for both Top-3 correctness ( Q = 25.66, p < 0.001) and Top-1 correctness ( Q = 27.55, p < 0.001). Post-hoc McNemar tests with the Benjamini\u2013Hochberg correction showed that JADE-Plus significantly outperformed other models, particularly under the stricter Top-1 evaluation. Ablation analysis showed that the agentic verification stage improved Top-1 and Top-3 accuracy by 15 and 8 percentage points, respectively. JADE-Plus achieved the highest reproducibility (mean Jaccard similarity 0.97 \u00b1 0.12) while maintaining a mean response time of 33 \u00b1 1.5 s per case. JADE-Plus demonstrated superior diagnostic accuracy, stability, and reproducibility compared with baseline systems, supporting multimodal agentic RAG frameworks for jawbone lesion diagnosis.",
+    "authors": [
+      "Soroush Baseri Saadi",
+      "Jonas Ver Berne",
+      "Rocharles Cavalcante Fontenele",
+      "Peter Claes",
+      "Reinhilde Jacobs"
+    ],
+    "categories": [
+      "Journal of Imaging Informatics in Medicine"
+    ],
+    "primary_category": "Journal of Imaging Informatics in Medicine",
+    "published": "2026-07-13",
+    "updated": "2026-07-13",
+    "abs_url": "https://doi.org/10.1007/s10278-026-02086-9",
+    "pdf_url": "https://link.springer.com/content/pdf/10.1007/s10278-026-02086-9.pdf",
+    "comment": "journal-article, Journal of Imaging Informatics in Medicine, Springer Science and Business Media LLC"
+  }
+]
